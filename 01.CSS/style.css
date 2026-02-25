@@ -1,0 +1,52 @@
+/* h1 {
+    color: red;
+} */
+
+/* Universal Selector */
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+
+
+/* ID Selector */
+
+/* #id {
+    color: red;
+} */
+
+
+
+/* Tag Selector */
+
+/* h1#title{
+    color: red;
+} */
+
+/* Class Selector */
+
+/* li.odd{
+    color: red;
+} */
+
+
+
+/* Attribute Selector  */
+
+/* [href="https://www.google.com"]{
+    color: red;
+} */
+
+
+/* Specificity  */
+
+#title {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
