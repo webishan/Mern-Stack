@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ID selector demo -->
+    <header id="page-header">
+      <h1>CSS Basics</h1>
+      <p>A hands-on reference covering the core concepts of CSS</p>
+    </header>
+
+    <main class="container">
+
+      <!-- 1. Selectors -->
+      <section class="section">
+        <h2>1. Selectors</h2>
+        <div class="highlight">
+          CSS selectors target HTML elements so you can apply styles to them.
+        </div>
+        <p>
+          <strong>Element</strong> — targets every <code>&lt;p&gt;</code> tag.<br />
+          <strong>Class</strong> — targets elements with <code>class="highlight"</code> (prefixed with <code>.</code>).<br />
+          <strong>ID</strong> — targets the unique element with <code>id="page-header"</code> (prefixed with <code>#</code>).<br />
+          <strong>Descendant</strong> — <code>.card p</code> targets every <code>&lt;p&gt;</code> inside a <code>.card</code>.<br />
+          <strong>Child</strong> — <code>.section &gt; h2</code> targets only direct <code>&lt;h2&gt;</code> children.
+        </p>
+      </section>
+
+      <!-- 2. Box Model -->
+      <section class="section">
+        <h2>2. The Box Model</h2>
+        <p>
+          Every element is a rectangular box made of four layers (from inside out):
+          <strong>content → padding → border → margin</strong>.
+        </p>
+        <div class="box-demo">
+          Content<br />
+          padding: 16px<br />
+          border: 4px solid
+        </div>
+        <p>
+          Setting <code>box-sizing: border-box</code> makes <code>width</code> and
+          <code>height</code> include padding and border, which is the most
+          predictable behaviour.
+        </p>
+      </section>
+
+      <!-- 3. Colors -->
+      <section class="section">
+        <h2>3. Colors</h2>
+        <p>CSS supports several color formats:</p>
+        <div class="color-grid">
+          <div class="color-swatch swatch-named">Named<br />tomato</div>
+          <div class="color-swatch swatch-hex">Hex<br />#2ecc71</div>
+          <div class="color-swatch swatch-rgb">RGB<br />rgb(52,152,219)</div>
+          <div class="color-swatch swatch-rgba">RGBA<br />rgba(155,89,182,.85)</div>
+          <div class="color-swatch swatch-hsl">HSL<br />hsl(30,100%,50%)</div>
+        </div>
+      </section>
+
+      <!-- 4. Typography -->
+      <section class="section">
+        <h2>4. Typography</h2>
+        <p style="font-family: Georgia, serif;">font-family: Georgia, serif</p>
+        <p style="font-size: 1.25rem; font-weight: bold;">font-size: 1.25rem | font-weight: bold</p>
+        <p style="font-style: italic; color: #888;">font-style: italic | color: #888</p>
+        <p style="text-align: center; letter-spacing: 0.1em; text-transform: uppercase;">
+          text-align: center | letter-spacing | text-transform: uppercase
+        </p>
+        <p style="text-decoration: underline wavy #e94560;">text-decoration: underline wavy</p>
+      </section>
+
+      <!-- 5. Flexbox -->
+      <section class="section">
+        <h2>5. Flexbox</h2>
+        <p>
+          Flexbox arranges items along a single axis (row or column) and
+          distributes space between them automatically.
+        </p>
+        <div class="flex-container">
+          <div class="flex-item">Item 1<br /><small>flex: 1 1 140px</small></div>
+          <div class="flex-item">Item 2<br /><small>flex: 1 1 140px</small></div>
+          <div class="flex-item">Item 3<br /><small>flex: 1 1 140px</small></div>
+          <div class="flex-item">Item 4<br /><small>flex: 1 1 140px</small></div>
+        </div>
+        <p>Key properties: <code>display: flex</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-wrap</code>, <code>gap</code>.</p>
+      </section>
+
+      <!-- 6. CSS Grid -->
+      <section class="section">
+        <h2>6. CSS Grid</h2>
+        <p>
+          Grid places items in a two-dimensional layout using rows and columns.
+        </p>
+        <div class="grid-container">
+          <div class="grid-item wide">Wide item — grid-column: span 2</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+          <div class="grid-item">Item 4</div>
+        </div>
+        <p>Key properties: <code>display: grid</code>, <code>grid-template-columns</code>, <code>gap</code>, <code>grid-column</code>, <code>grid-row</code>.</p>
+      </section>
+
+      <!-- 7. Pseudo-classes & Pseudo-elements -->
+      <section class="section">
+        <h2>7. Pseudo-classes &amp; Pseudo-elements</h2>
+        <p>
+          <strong>Pseudo-classes</strong> style an element based on its state or
+          position (<code>:hover</code>, <code>:nth-child</code>, <code>:first-child</code>).
+          <strong>Pseudo-elements</strong> style a specific part of an element
+          (<code>::before</code>, <code>::after</code>, <code>::first-line</code>).
+        </p>
+        <ul class="pseudo-list">
+          <li>Odd row — hover me</li>
+          <li>Even row — hover me</li>
+          <li>Odd row — hover me</li>
+          <li>Even row — hover me</li>
+        </ul>
+        <p><small>The first item gets a ★ via <code>::before</code>. Odd/even rows use <code>:nth-child</code>.</small></p>
+      </section>
+
+      <!-- 8. Card component -->
+      <section class="section">
+        <h2>8. Putting It Together — Card Component</h2>
+        <p>
+          Here is a simple card that combines the concepts above: box model,
+          colors, typography, and a hover transition.
+        </p>
+        <div class="flex-container">
+          <div class="card flex-item">
+            <p class="card-title">Card One</p>
+            <p>Hover over this card to see the box-shadow and translate transition.</p>
+            <a href="#">Learn more →</a>
+          </div>
+          <div class="card flex-item">
+            <p class="card-title">Card Two</p>
+            <p>Styles are applied with class selectors and the cascade.</p>
+            <a href="#">Learn more →</a>
+          </div>
+          <div class="card flex-item">
+            <p class="card-title">Card Three</p>
+            <p>A single CSS rule can style every card at once.</p>
+            <a href="#">Learn more →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Media Queries -->
+      <section class="section">
+        <h2>9. Responsive Design &amp; Media Queries</h2>
+        <div class="highlight">
+          Resize the browser window below 600 px — the grid collapses to a single
+          column and the heading shrinks.
+        </div>
+        <p>
+          Media queries let you apply different styles depending on the viewport
+          size, orientation, or other device characteristics:
+        </p>
+        <pre style="background:#f4f4f4;padding:1rem;border-radius:4px;overflow:auto;"><code>@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+      </section>
+
+    </main>
+
+  </body>
+</html>

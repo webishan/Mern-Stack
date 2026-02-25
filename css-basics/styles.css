@@ -1,0 +1,265 @@
+/* =============================================
+   CSS BASICS — styles.css
+   Covers: selectors, box model, colors,
+   typography, flexbox, grid, and pseudo-classes
+   ============================================= */
+
+/* ---------- 1. CSS RESET / BASE ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* ---------- 2. TYPOGRAPHY ---------- */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #16213e;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0f3460;
+  padding-bottom: 0.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ---------- 3. SELECTORS ---------- */
+
+/* Element selector */
+a {
+  color: #0f3460;
+  text-decoration: none;
+}
+
+/* Pseudo-class selector */
+a:hover {
+  text-decoration: underline;
+  color: #e94560;
+}
+
+/* Class selector */
+.highlight {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ID selector */
+#page-header {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#page-header h1 {
+  color: #ffffff;
+}
+
+#page-header p {
+  color: #cccccc;
+  margin-bottom: 0;
+}
+
+/* Descendant selector */
+.card p {
+  color: #555555;
+}
+
+/* Child selector */
+.section > h2 {
+  margin-top: 0;
+}
+
+/* ---------- 4. BOX MODEL ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Box model demo */
+.box-demo {
+  width: 200px;
+  height: 80px;
+  padding: 16px;
+  border: 4px solid #0f3460;
+  margin: 1rem auto;
+  background-color: #d0e8ff;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  border-radius: 4px;
+}
+
+/* ---------- 5. COLORS ---------- */
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.color-swatch {
+  width: 120px;
+  height: 70px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Named color */
+.swatch-named  { background-color: tomato;            color: #fff; }
+/* Hex color */
+.swatch-hex    { background-color: #2ecc71;            color: #fff; }
+/* RGB color */
+.swatch-rgb    { background-color: rgb(52, 152, 219);  color: #fff; }
+/* RGBA color */
+.swatch-rgba   { background-color: rgba(155, 89, 182, 0.85); color: #fff; }
+/* HSL color */
+.swatch-hsl    { background-color: hsl(30, 100%, 50%); color: #fff; }
+
+/* ---------- 6. FLEXBOX ---------- */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.flex-item {
+  flex: 1 1 140px;
+  background-color: #eaf0fb;
+  border: 1px solid #b0c4de;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+}
+
+/* ---------- 7. CSS GRID ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.grid-item {
+  background-color: #fde8f0;
+  border: 1px solid #f5b8cf;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6d1a36;
+}
+
+.grid-item.wide {
+  grid-column: span 2;
+  background-color: #ffc6d9;
+}
+
+/* ---------- 8. PSEUDO-CLASSES & PSEUDO-ELEMENTS ---------- */
+.pseudo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pseudo-list li {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+  transition: background-color 0.2s;
+}
+
+.pseudo-list li:nth-child(odd) {
+  background-color: #f0f4ff;
+}
+
+.pseudo-list li:nth-child(even) {
+  background-color: #e8f5e9;
+}
+
+.pseudo-list li:hover {
+  background-color: #ffe082;
+  cursor: pointer;
+}
+
+.pseudo-list li:first-child::before {
+  content: "★ ";
+  color: #e94560;
+}
+
+/* ---------- 9. CARD COMPONENT ---------- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1a1a2e;
+}
+
+/* ---------- 10. RESPONSIVE — MEDIA QUERIES ---------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item.wide {
+    grid-column: span 1;
+  }
+}
