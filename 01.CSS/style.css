@@ -43,10 +43,60 @@
 
 /* Specificity  */
 
-#title {
+/* #title {
     color: red;
 }
 
 h1 {
     color: blue;
+} */
+
+
+/* li {
+    color: blue;
+}
+
+* {
+    color: red !important;
+} */
+
+
+/* #title {
+    color: red;
+} */
+
+
+/* CSS Combinators */
+
+/* Descendant combinator (space)
+Child combinator (>)
+Next sibling combinator (+)
+Subsequent-sibling combinator (~) */
+
+
+/* Descendant combinator (space) */
+/* div.first-div h1{
+    color: red;
+} */
+
+
+/* Child combinator (>) */
+/* .first-div > h1{
+    color: red;
+} */
+
+
+/* Next sibling combinator (+) */
+/* h1 + p{
+    color: red;
+} */
+
+
+/* Subsequent-sibling combinator (~) */
+/* h1 ~ p{
+    color: red;
+}  */
+
+body > .first-div > h1 + p {
+    color:red
 }
