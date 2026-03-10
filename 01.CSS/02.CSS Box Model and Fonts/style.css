@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MyBanglaFont';
+    src: url(./fonts/Li\ Purno\ Pran\ Unicode.ttf);
+}
+
+p.bangla{
+    font-family: 'MyBanglaFont', sans-serif;
+}

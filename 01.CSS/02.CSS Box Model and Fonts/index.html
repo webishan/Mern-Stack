@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: tomato;
+            /* padding: 40px 20px 15px 10px;  Ordering: Top Right Bottom Left (Clockwise) */
+            padding: 40px 20px;
+            /*Ordering: Top+Bottom Left+Right */
+            border: 40px solid black;
+            /* margin-bottom: 100px; */
+            box-sizing: border-box;
+            overflow: auto;
+
+        }
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: teal;
+            /* margin-top: 150px;  Margin Shares both spaces -> Margin Collapse */
+            margin-bottom: 150px;
+        }
+
+        a {
+            width: 300px;
+            height: 300px;
+            background-color: tomato;
+            color: #fff;
+            padding: 15px 30px;
+            border: 3px solid black;
+            margin-right: 30px;
+            display: inline-block;
+
+        }
+
+        p {
+            font-family: "Chiron Hei HK", sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem blanditiis doloribus cum nesciunt quae
+            perspiciatis magni impedit ea officia, minima, quod veritatis quaerat iure, molestias dolores nemo. Sunt
+            deleniti nobis excepturi harum dignissimos ducimus. Fuga ut, odit repellat impedit iusto perspiciatis,
+            doloribus delectus ullam culpa quo eos nemo at veritatis?</p>
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, error nobis quia consequatur suscipit
+            debitis. Quidem quasi aperiam libero aliquid inventore vitae voluptas corporis quis qui veritatis enim
+            provident repellendus a nesciunt dicta tempora excepturi id molestias facilis quisquam porro iste, autem
+            eveniet? Reiciendis totam molestias, fugit itaque accusantium quibusdam.</p>
+    </div>
+    <a href="#">Google</a>
+    <a href="#">Yahoo</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia rerum unde soluta qui est molestiae
+        autem laboriosam eveniet repudiandae quisquam pariatur vero error deleniti ea iure, cum ipsum similique
+        corporis, quasi quos! Itaque temporibus recusandae voluptate neque sit aliquid possimus, quaerat quis eligendi
+        animi odit, magni sapiente aspernatur sunt.</p>
+
+    <p class="bangla">
+        বাংলা ভাষা পৃথিবীর অন্যতম সমৃদ্ধ ও সুন্দর ভাষা। এই ভাষার মাধ্যমে আমরা আমাদের অনুভূতি, চিন্তা এবং সংস্কৃতি প্রকাশ
+        করি। বাংলা ভাষার ইতিহাস অনেক পুরনো এবং গৌরবময়। ১৯৫২ সালের ভাষা আন্দোলনের মাধ্যমে বাঙালি জাতি তাদের মাতৃভাষার
+        জন্য আত্মত্যাগ করেছে, যা বিশ্বে একটি অনন্য উদাহরণ।
+
+        বাংলা শুধু যোগাযোগের মাধ্যম নয়, এটি আমাদের পরিচয় ও গর্বের প্রতীক। বাংলা সাহিত্য, গান, কবিতা এবং সংস্কৃতির
+        মাধ্যমে এই ভাষা আরও সমৃদ্ধ হয়েছে। তাই আমাদের উচিত বাংলা ভাষাকে ভালোবাসা, সঠিকভাবে ব্যবহার করা এবং ভবিষ্যৎ
+        প্রজন্মের কাছে এর সৌন্দর্য পৌঁছে দেওয়া।
+    </p>
+</body>
+
+</html>
