@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        /* ul{
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        li{
+            border: 1px solid black;
+        } */
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 100px;
+        }
+
+        ul li {
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            padding: 20px 35px;
+            background-color: tomato;
+            color: #fff;
+            border: 1px solid tomato;
+            transition: all 0.5s;
+        }
+
+        ul li a:hover {
+            background-color: transparent;
+            color: tomato;
+            border-radius: 10px;
+            box-shadow: 3px 4px 17px -6px rgba(0, 0, 0, 0.75);  /* CSS Box Shadow Generator */
+            -webkit-box-shadow: 3px 4px 17px -6px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 3px 4px 17px -6px rgba(0, 0, 0, 0.75);
+        }
+
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: tomato;
+            clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); /* CSS Clip Path Generator */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+</body>
+
+</html>
